@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Greeting</title>
+  <link rel="stylesheet" href="flirt.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="message">
+        <p>Hello!</p>
+        <p>I heard you had a little disagreement with your boyfriend. I hope everything gets better soon!</p>
+        <p>Here's a little something to cheer you up:</p>
+      </div>
+      <button id="surpriseButton">Click for Surprise!</button>
+      <div class="surprise" id="surprise" style="display: none;">
+        <div id="confettiWrapper">
+          <canvas id="confettiCanvas"></canvas>
+        </div>
+        <div id="messageDisplay">
+          <p>You're amazing!</p>
+          <!-- Image Container -->
+          <div id="imageContainer" style="display: none;">
+            <img src="photo_2024-03-12_11-03-58.jpg" alt="Girl's Photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="hyy.mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+  <script src="flirt.js"></script>
+</body>
+</html>

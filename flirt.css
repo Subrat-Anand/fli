@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.container {
+    text-align: center;
+    width: 90%; /* Added width for responsiveness */
+    margin: 0 auto; /* Center align the container */
+    max-width: 600px; /* Added max-width */
+}
+  
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+}
+  
+.message p {
+    margin: 10px 0;
+}
+  
+#surpriseButton {
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+#surpriseButton:hover {
+    background-color: #524bff;
+}
+  
+.surprise {
+    display: none;
+}
+  
+#confettiWrapper {
+    position: relative;
+}
+  
+#confettiCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+#messageDisplay {
+    opacity: 0;
+    margin-top: 20px;
+    animation: fadeIn 1s ease 1s forwards;
+}
+
+#imageContainer {
+    margin-top: 20px;
+    display: none; /* Initially hide the image */
+}
+
+#imageContainer img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: 400px; /* Maintain aspect ratio */
+    max-height: 70vh; /* Set maximum height as 70% of viewport height */
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
